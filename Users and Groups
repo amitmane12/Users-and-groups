@@ -1,0 +1,44 @@
+Linux/Unix operating systems have the ability to multitask in a manner similar to other operating systems. However, Linux’s major difference from other operating systems is its ability to have multiple users. Linux was designed to allow more than one user to have access to the system at the same time.
+In order for this multiuser design to work properly, there needs to be a method to protect users from each other. This is where permissions come in to play.
+
+Read, Write, & Execute Permissions :
+
+Permissions are the “rights” to act on a file or directory. The basic rights are read, write, and execute.
+
+Read: a readable permission allows the contents of the file to be viewed. A read permission on a directory allows you to list the contents of a directory.
+Write: a write permission on a file allows you to modify the contents of that file. For a directory, the write permission allows you to edit the contents of a directory (e.g. add/delete files).
+Execute: for a file, the executable permission allows you to run the file and execute a program or script. For a directory, the execute permission allows you to change to a different directory and make it your current working directory. Users usually have a default group, but they may belong to several additional groups.
+
+1) Users :
+          -Users in Linux plays an important role in the efficient management of the privileges. 
+          -Also users allow sysadmin to manage the file permission while file sharing.
+
+2)Sudo User:
+            -Basically sudo user is a tool that allows users & groups to have access to commands they normally would not able to access.
+            -sudo enables user to have administration privilliges without logging in directly as a root user.
+3)Group :
+         -Group is a collection of specific users.
+         -Basically there are two groups:
+                                         1.Primary Group:-  - it is the default group that user belongs to.
+                                                            - this is generally stored in /etc/passwd file.
+       
+                                         2.Secondary Group:-  - once the user is created with the primary group it can be added to the other groups.
+                                                              - generally stored in /etc/group file.
+
+
+Commands for users and groups :-
+
+whoami : To display the username of the current use.
+su : to switch user
+useradd : add a user to the system.
+userdel : delete a user account and related files.
+groupadd : add a group to the system.
+delgroup : remove a group from the system.
+groupdel - to delete group
+usermod : modify a user account.
+usermod -aG admin : To append user to the secondary group.
+cat /etc/passwd : To check addition of the user 
+passwd  : To assign the password to user  
+id : To get data about user and its group 
+chage : change user password expiry information.
+sudo: run one or more commands as another user typically with superuser permissions.
